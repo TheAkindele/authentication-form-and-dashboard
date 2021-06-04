@@ -1,0 +1,9 @@
+@import "./mixins.scss";
+@import "./screens.scss";
+
+.app {
+  @include flex(row, center, center);
+  background: gray;
+  color: yellow;
+  height: 100vh;
+}
