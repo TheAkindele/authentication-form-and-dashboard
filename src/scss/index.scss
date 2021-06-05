@@ -1,3 +1,20 @@
 @import "./mixins.scss";
 @import "./screens.scss";
 @import "./App.scss";
+@import "./button.scss";
+@import "./sidebar.scss";
+@import "./input.scss";
+@import "./auth.scss";
+@import "./dashboard.scss";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.loader {
+  @include flex(row, center, center);
+  margin: 0 auto;
+}

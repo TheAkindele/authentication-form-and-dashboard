@@ -1,0 +1,459 @@
+@import "./mixins.scss";
+@import "./screens.scss";
+
+.dashboard {
+  background: #f4f8fb;
+  width: 100%;
+  height: 100%;
+  @include screen("inbetween") {
+    box-sizing: border-box;
+  }
+
+  nav {
+    display: none;
+    @include screen("inbetween") {
+      display: block;
+      @include flex(row, space-between, center);
+      padding: 1rem;
+      background-color: #ffffff;
+    }
+    .menu-box {
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+      border: 1px solid black;
+      padding: 0.2rem;
+      border-radius: 6px;
+      @include screen("inbetween") {
+        width: 2rem;
+        height: 2rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .step1 {
+    height: 10%;
+    padding: 0 5.62rem;
+    background-color: #ffffff;
+    @include flex(row, space-between, center);
+    border-bottom: 1px solid rgb(236, 231, 231);
+    @include screen("inbetween") {
+      padding: 1rem;
+      height: auto;
+    }
+    p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.312rem;
+      line-height: 1.937rem;
+      color: #8397ab;
+      margin: 0;
+      @include screen("inbetween") {
+        font-size: 1rem;
+        line-height: 1rem;
+      }
+    }
+    .profile {
+      @include flex(row, nill, center);
+      @include screen("inbetween") {
+        height: 1.8rem;
+        img {
+          height: 100%;
+        }
+      }
+      #avatar {
+        margin-left: 1rem;
+        @include screen("inbetween") {
+        }
+      }
+    }
+  }
+  .step2 {
+    padding: 0 5.62rem;
+    @include flex(row, space-between, center);
+    margin: 2.37rem 0;
+    @include screen("inbetween") {
+      @include flex(column, space-around, center);
+      padding: 0 1rem;
+    }
+    .greeting {
+      @include screen("inbetween") {
+        width: 100%;
+        text-align: center;
+      }
+      #welcome {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        color: #1c1335;
+        margin: 0;
+        @include screen("inbetween") {
+          font-size: 1rem;
+        }
+      }
+      #here {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #1c1335;
+        margin: 0;
+        span {
+          color: #fa4a84;
+          cursor: pointer;
+        }
+        @include screen("inbetween") {
+          font-size: 0.6rem;
+        }
+      }
+    }
+    .dash-btn {
+      width: 10rem;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.312rem;
+      color: #ffffff;
+      margin: 0;
+      border-radius: 4px;
+      @include screen("inbetween") {
+        // width: 80%;
+        margin-top: 1rem;
+        height: auto;
+        padding: 0.6rem 0;
+        font-size: 0.7rem;
+        line-height: 1rem;
+      }
+    }
+  }
+
+  .step3 {
+    @include flex(row, space-between, nill);
+    padding: 0 5.62rem;
+    @include screen("inbetween") {
+      @include flex(column, space-around, center);
+      padding: 1rem;
+    }
+    .card-box {
+      @include flex(column, space-between, nill);
+      padding: 1rem 1.5rem;
+      background: #ffffff;
+      box-shadow: 0px 0px 1px rgba(131, 151, 171, 0.16),
+        0px 4px 6px rgba(131, 151, 171, 0.16);
+      border-radius: 6px;
+      width: 43.5%;
+      height: 10.62rem;
+      @include screen("inbetween") {
+        height: auto;
+        width: 90%;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+      }
+      p {
+        margin: 0;
+      }
+      .top {
+        @include flex(row, space-between, center);
+        @include screen("inbetween") {
+          margin-bottom: 2.5rem;
+        }
+        .left {
+          #acc {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.875rem;
+            line-height: 1.312rem;
+            color: #1c1335;
+            @include screen("inbetween") {
+              font-size: 0.5rem;
+              line-height: 1rem;
+            }
+          }
+          #num {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.312rem;
+            color: #8397ab;
+            @include screen("inbetween") {
+              font-size: 0.5rem;
+              line-height: 1rem;
+            }
+          }
+        }
+      }
+      .down {
+        #balance {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 2.25rem;
+          line-height: 3.37rem;
+          color: #1c1335;
+          @include screen("inbetween") {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+          }
+          span {
+            font-size: 1.1rem;
+            @include screen("inbetween") {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .step4 {
+    @include flex(row, space-between, nill);
+    padding: 0 5.62rem;
+    margin-top: 1rem;
+    // height: 23.5rem;
+    margin-bottom: 2rem;
+    @include screen("inbetween") {
+      @include flex(column, center, center);
+      padding: 0 2.5rem;
+      height: auto;
+    }
+
+    .left {
+      width: 51%;
+      background: #ffffff;
+      box-shadow: 0px 0px 1px rgba(131, 151, 171, 0.16),
+        0px 4px 6px rgba(131, 151, 171, 0.16);
+      border-radius: 6px;
+      padding: 1.2rem 1rem;
+      @include screen("inbetween") {
+        width: 100%;
+      }
+      .main-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.687rem;
+        color: #1c1335;
+        margin: 0 0 1.43rem 0;
+        @include screen("inbetween") {
+          font-size: 1rem;
+          line-height: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .sub-title {
+        @include flex(row, nill, center);
+        margin-bottom: 1.43rem;
+        .money-box {
+          margin-right: 2.5rem;
+          @include screen("inbetween") {
+            margin-right: 1.5rem;
+          }
+          #money {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.312rem;
+            color: #8397ab;
+            margin: 0;
+            @include screen("inbetween") {
+              font-size: 0.6rem;
+              line-height: 1rem;
+            }
+          }
+          #figure {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.875rem;
+            line-height: 1.312rem;
+            color: #1c1335;
+            margin: 0;
+            @include screen("inbetween") {
+              font-size: 0.7rem;
+              line-height: 1rem;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 40%;
+      background: #ffffff;
+      box-shadow: 0px 0px 1px rgba(131, 151, 171, 0.16),
+        0px 4px 6px rgba(131, 151, 171, 0.16);
+      border-radius: 6px;
+      padding: 1.2rem 1rem;
+      @include screen("inbetween") {
+        width: 100%;
+        margin-top: 1.5rem;
+      }
+      .main-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.687rem;
+        color: #1c1335;
+        margin: 0 0 1.43rem 0;
+        @include screen("inbetween") {
+          font-size: 0.9rem;
+          line-height: 1rem;
+        }
+      }
+      .summary {
+        @include flex(row, space-between, center);
+        margin-bottom: 2rem;
+        @include screen("inbetween") {
+        }
+        .icon-box {
+          border-radius: 4px;
+          width: 1.5rem;
+          height: 1.5rem;
+          padding: 0.5rem;
+          width: 8%;
+          margin-right: 1rem;
+          @include screen("inbetween") {
+            width: 1rem;
+            height: 1rem;
+            padding: 0.3rem;
+          }
+        }
+        #bank-icon {
+          background: #e900ae;
+        }
+        #internet-icon {
+          background: #17ecd4;
+        }
+        #market-icon {
+          background: #c155ff;
+        }
+        #transfer-icon {
+          background: #00ec47;
+        }
+        #img {
+          width: 100%;
+          height: 100%;
+        }
+        #label {
+          margin: 0;
+          width: 35%;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 0.875rem;
+          line-height: 1.312rem;
+          color: #8397ab;
+          @include screen("inbetween") {
+            font-size: 0.6rem;
+            line-height: 1rem;
+          }
+        }
+        .flow-box {
+          @include flex(column, center, flex-start);
+          align-self: flex-end;
+          justify-self: flex-end;
+          width: 55%;
+          // border: 1px solid red;
+          label {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.875rem;
+            line-height: 1.312rem;
+            color: #1c1335;
+            @include screen("inbetween") {
+              font-size: 0.6rem;
+              line-height: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .step5 {
+    padding: 0 5.62rem;
+    margin-bottom: 2rem;
+    @include screen("inbetween") {
+      padding: 1rem;
+    }
+    .card5 {
+      background: #ffffff;
+      box-shadow: 0px 0px 1px rgba(131, 151, 171, 0.16),
+        0px 4px 6px rgba(131, 151, 171, 0.16);
+      border-radius: 6px;
+      border-bottom: none;
+      width: 100%;
+      padding: 1rem 0.5rem;
+      @include screen("inbetween") {
+        // padding: 1rem;
+      }
+    }
+    .top {
+      @include flex(row, space-between, center);
+      p {
+        margin: 0;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #1c1335;
+        @include screen("inbetween") {
+          font-size: 0.7rem;
+          line-height: 1rem;
+        }
+      }
+      .white-btn {
+        border: 1px solid #fa4a84;
+        box-sizing: border-box;
+        border-radius: 6px;
+        background-color: #ffff;
+        width: 4.4rem;
+        height: 2rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.312rem;
+        text-align: center;
+        color: #fa4a84;
+        @include screen("inbetween") {
+          width: 30%;
+          height: auto;
+          padding: 0.3rem 1rem;
+        }
+      }
+    }
+  }
+}
+// progress {
+//   background-color: #f3f3f3;
+//   color: rgb(20, 240, 221);;
+// }
+
+progress {
+  /* RESETS */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 20px;
+  background-color: #eeeff7;
+  color: yellow;
+}
+
+/* WEBKIT BROWSERS - CHROME, OPERA AND SAFARI */
+progress::-webkit-progress-bar {
+  background-color: #eeeff7;
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+  background-color: yellow;
+  border-radius: 20px;
+}
+
+/* MOZILLA FIREFOX */
+progress::-moz-progress-bar {
+  background-color: yellow;
+  border-radius: 20px;
+}

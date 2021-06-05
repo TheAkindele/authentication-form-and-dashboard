@@ -1,0 +1,157 @@
+@import "./mixins.scss";
+@import "./screens.scss";
+
+.auth {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  @include flex(column, nill, nill);
+  font-family: "Poppins", sans-serif;
+  padding: 2rem 6rem 10rem 2rem;
+  @include screen("inbetween") {
+    padding: 2.5rem 1.5rem;
+  }
+  .top-most {
+    width: 100%;
+    @include flex(row, flex-end, center);
+    border: 1px solid white;
+    margin-bottom: 6.8rem;
+    @include screen("inbetween") {
+      margin-bottom: 3rem;
+    }
+    #top {
+      align-self: flex-end;
+      justify-self: flex-end;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.312rem;
+      text-align: right;
+      color: #1c1335;
+      margin: 0;
+      span {
+        color: #fa4a84;
+        margin: 0;
+        cursor: pointer;
+      }
+      @include screen("inbetween") {
+        font-size: 0.5rem;
+      }
+    }
+    &.most {
+      @include flex(row, space-between, center);
+    }
+    #back-btn {
+      cursor: pointer;
+    }
+  }
+  .main {
+    // margin-left: 21rem;
+    margin-left: 30%;
+    @include screen("inbetween") {
+      margin-left: 0;
+    }
+  }
+  #title-box {
+    margin-bottom: 1.5rem;
+    #topic {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 42px;
+      color: #1b003b;
+      margin: 0;
+    }
+    #sub-topic {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: #8397ab;
+      margin: 0;
+    }
+  }
+  .form-box {
+    margin-bottom: 2rem;
+  }
+  .radio-box {
+    @include flex(row, nill, nill);
+    width: 23.4rem;
+    padding: 1.5rem 3.5rem 1rem 1rem;
+    margin-bottom: 1rem;
+    background: #ffffff;
+    // border: 1px solid #fa4a84;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgba(131, 151, 171, 0.12),
+      0px 4px 8px rgba(131, 151, 171, 0.24);
+    border-radius: 6px;
+    cursor: pointer;
+    @include screen("inbetween") {
+      width: 100%;
+    }
+
+    label {
+      margin-left: 0.75rem;
+      #title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #1c1335;
+        margin: 0;
+      }
+      .show {
+        display: block;
+      }
+      .hide {
+        display: none;
+      }
+      #sub {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.812rem;
+        line-height: 1.187rem;
+        color: #8397ab;
+        margin: 0 0 1rem 0;
+      }
+      .sub {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.812rem;
+        line-height: 1.187rem;
+        color: #8397ab;
+        margin: 0;
+      }
+
+      .text-box {
+        @include flex(row, nill, center);
+        // border: 1px solid red;
+        padding: 0;
+        margin: 0 0 0.5rem 0;
+        img {
+          margin-right: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+.input-cont {
+  width: 23rem;
+  height: auto;
+
+  #box {
+    @include flex(row, space-between, center);
+    #tell {
+      width: 25%;
+    }
+    #phone {
+      width: 72%;
+    }
+  }
+}
+
+input[type="radio"]:checked {
+  outline: none;
+  background-color: hotpink;
+  border: 1px solid hotpink;
+}
