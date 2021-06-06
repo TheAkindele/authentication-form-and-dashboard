@@ -32,7 +32,7 @@ export const Dashboard = ({smallNav}) => {
                     <div className="top">
                         <div className="left">
                             <p id="acc">CURRENT ACCOUNT</p>
-                            <p id="num">PROVIDUS ACCOUNT - 1234567890</p>
+                            <p id="num">PROVIDUS BANK - 1234567890</p>
                         </div>
                         <img src="/icons/card-purple.svg" alt="card" id="card" />
                     </div>
@@ -100,7 +100,7 @@ export const Dashboard = ({smallNav}) => {
                         <div className="icon-box" id="market-icon">
                             <img src="/icons/marketing.svg" alt="bank" id="img" />
                         </div>
-                        <p id="label">Bank Fees</p>
+                        <p id="label">Marketing</p>
                         <div className="flow-box">
                             <label htmlFor="file">- N250,000</label> 
                             <progress id="file" value="40" max="100"></progress>
@@ -110,7 +110,7 @@ export const Dashboard = ({smallNav}) => {
                         <div className="icon-box" id="transfer-icon">
                             <img src="/icons/transfer.svg" alt="bank" id="img" />
                         </div>
-                        <p id="label">Bank Fees</p>
+                        <p id="label">Transfer</p>
                         <div className="flow-box">
                             <label htmlFor="file">- N250,000</label> 
                             <progress id="file" value="10" max="100"></progress>

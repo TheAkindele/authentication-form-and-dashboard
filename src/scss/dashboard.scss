@@ -36,7 +36,8 @@
   }
 
   .step1 {
-    height: 10%;
+    // height: 10%;
+    height: 5rem;
     padding: 0 5.62rem;
     background-color: #ffffff;
     @include flex(row, space-between, center);
@@ -442,7 +443,7 @@ progress {
   height: 0.3rem;
   border-radius: 20px;
   background-color: #eeeff7;
-  color: yellow;
+  color: #ffcf56;
 }
 
 /* WEBKIT BROWSERS - CHROME, OPERA AND SAFARI */
@@ -452,12 +453,12 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: yellow;
+  background-color: #ffcf56;
   border-radius: 20px;
 }
 
 /* MOZILLA FIREFOX */
 progress::-moz-progress-bar {
-  background-color: yellow;
+  background-color: #ffcf56;
   border-radius: 20px;
 }

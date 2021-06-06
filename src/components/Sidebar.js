@@ -35,7 +35,7 @@ export const AuthSider = ({smallNav}) => {
     const [options , setOptions] = useState(false)
 
     return (
-        <div className="sider">
+        <div className="auth-sider">
             <div id="menu-box"
                 onClick={() => smallNav()}
             >
@@ -53,10 +53,10 @@ export const AuthSider = ({smallNav}) => {
             </div>
             {options && (
                 <div className="options">
-                    <p id="active">Clayvant Inc</p>
-                    <p id="second">Business Name 2</p>
-                    <p>Business Name 3</p>
-                    <p>Add a business</p>
+                    <p className="opt" id="active">Clayvant Inc</p>
+                    <p className="opt" id="second">Business Name 2</p>
+                    <p  id="third">Business Name 3</p>
+                    <p  id="fourth">Add a business</p>
                 </div>
              )}
             <div className="step2">
@@ -78,9 +78,10 @@ export const AuthSider = ({smallNav}) => {
                         <p>Support</p>
                     </li>
                 </ul>
-                <div className="logo-box">
-                    <img src="/icons/prospa-logo-grey.svg" alt="logo" id="logo" />
-                </div>
+                
+            </div>
+            <div className="logo-box">
+                <img src="/icons/prospa-logo-grey.svg" alt="logo" id="logo" />
             </div>
         </div>
     )

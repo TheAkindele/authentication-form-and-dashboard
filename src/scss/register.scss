@@ -11,7 +11,6 @@
   position: relative;
   @include screen("inbetween") {
     padding: 2.5rem 1.5rem;
-    // padding: 0;
     box-sizing: border-box;
     position: relative;
   }
@@ -177,7 +176,7 @@
         font-style: normal;
         font-weight: normal;
         font-size: 0.812rem;
-        line-height: 1.187rem;
+        line-height: 1rem;
         color: #8397ab;
         margin: 0;
         @include screen("inbetween") {

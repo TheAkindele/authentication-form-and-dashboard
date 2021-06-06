@@ -6,34 +6,49 @@
 
 .register-layout {
   @include flex(row, nill, nill);
+  position: relative;
   .register-sider {
     width: 25%;
     margin: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
     @include screen("inbetween") {
       display: none;
     }
   }
   .register-content {
     width: 75%;
+    position: relative;
+    margin-left: 25%;
     @include screen("inbetween") {
       width: 100%;
+      margin-left: 0;
     }
   }
 }
 
 .auth-layout {
   @include flex(row, nill, nill);
+  position: relative;
   .log-sider {
     width: 21%;
     margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
     @include screen("inbetween") {
       display: none;
     }
   }
   .log-content {
     width: 79%;
+    margin-left: 21%;
     @include screen("inbetween") {
       width: 100%;
+      margin-left: 0;
     }
   }
 

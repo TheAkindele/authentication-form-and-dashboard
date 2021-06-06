@@ -3,7 +3,6 @@
 
 .button {
   width: 10rem;
-  // padding: 1rem 1.5rem;
   height: 3.125rem;
   width: 23.437rem;
   cursor: pointer;
@@ -17,14 +16,6 @@
   line-height: 1.5rem;
   text-align: center;
   color: #ffffff;
-  // margin-top: 1rem;
-  // @include screen("inbetween") {
-  //   width: 100%;
-  // }
-
-  // &:hover {
-  //   background: #c24a72;
-  // }
 
   &.second-btn {
     background-color: pink;

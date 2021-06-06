@@ -80,7 +80,7 @@ export const Signup2 = ({nextStep, backStep}) => {
                 <label htmlFor="freelance" >
                     <div>
                         <div id="topics">
-                            <p id="title">I'm a freelance, I do business in my personal name</p>
+                            <p id="title">I'm a freelancer, I do business in my personal name</p>
                         </div>
                     </div>
                 </label>
