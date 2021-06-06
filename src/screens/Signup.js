@@ -21,18 +21,18 @@ export const SignupForm = ({back}) => {
 }
 
 export const Signup2 = ({nextStep, backStep}) => {
-    const [details, setDetails] = useState(false)
+    const [details, setDetails] = useState({first: false, second: false})
 
     return (
-        <form>
-            <div className="radio-box" >
+        <div className="detail-form">
+            <div className={`radio-box ${details.first && "border-red"}`}>
                 <input type="radio" name="register" value="registered" id="registered" 
-                    onClick={() => setDetails(!details)}
+                    onClick={() => setDetails({first: !details.first})}
                 />
-                <label for="registered" >
+                <label htmlFor="registered" >
                     <div>
                         <p id="title">I have a registered business / charity with CAC</p>
-                        <div className={details ? "show" : "hide"}>
+                        <div className={details.first ? "show" : "hide"}>
                             <p id="sub" >As a registered business, you'll get</p>
                             <div className="text-box">
                                 <img src="/icons/mark.svg" alt="mark" id="mark"/>
@@ -50,14 +50,14 @@ export const Signup2 = ({nextStep, backStep}) => {
                     </div>
                 </label>
             </div>
-            <div className="radio-box">
+            <div className={`radio-box ${details.second && "border-red"}`}>
                 <input type="radio" name="register" value="unregistered" id="unregistered"
-                    onClick={() => setDetails(!details)}
+                    onClick={() => setDetails({second: !details.second})}
                 />
-                <label for="unregistered" >
+                <label htmlFor="unregistered" >
                     <div>
                         <p id="title">My business is not yet registered, I would like to register</p>
-                        <div className={details ? "show" : "hide"}>
+                        <div className={details.second ? "show" : "hide"}>
                             <p id="sub" >Everything you need to start your business</p>
                             <div className="text-box">
                                 <img src="/icons/mark.svg" alt="mark" id="mark"/>
@@ -77,7 +77,7 @@ export const Signup2 = ({nextStep, backStep}) => {
             </div>
             <div className="radio-box">
                 <input type="radio" name="register" value="freelance" id="freelance" />
-                <label for="freelance" >
+                <label htmlFor="freelance" >
                     <div>
                         <div id="topics">
                             <p id="title">I'm a freelance, I do business in my personal name</p>
@@ -85,55 +85,8 @@ export const Signup2 = ({nextStep, backStep}) => {
                     </div>
                 </label>
             </div>
-        </form>
+        </div>
     )
 }
 
 
-
-
-// export const Signup = () => {
-//     const [step, setStep] = useState(0)
-//     const nextStep = () => setStep(step + 1)
-//     const backStep = () => setStep(step - 1)
-
-//     return (
-//         <div className="auth">
-            
-//             <div className={`top-most ${step !== 1 && "most" }`}>
-//                 {step !== 1 && (
-//                     <img src="/icons/back-btn.svg" alt="back" id="back-btn"
-//                         onClick={() => backStep()}
-//                     />
-//                 )}
-//                 <p id="top">
-//                     Already a member? {" "}
-//                     <span>Sign In</span>
-//                 </p>
-//             </div>
-//             <div className="main">
-//                 {step === 1 && (
-//                     <div id="title-box">
-//                         <p id="topic">Create your account</p>
-//                         <p id="sub-topic">A short description about account types</p>
-//                     </div>
-//                 )}
-//                 {step === 2 && (
-//                     <div id="title-box">
-//                         <p id="topic">Open a new business account</p>
-//                         <p id="sub-topic">A short description comes here</p>
-//                     </div>
-//                 )}
-//                 <form className="form-box">
-//                     {step === 0 <Signin />}
-//                    {step === 1 && <SignupForm />}
-//                    {step === 2 && <Signup2 next={nextStep} back={backStep} />}
-//                 </form>
-//                 <Button 
-//                     text="Next"
-//                     onClick={() => nextStep()}
-//                 />
-//             </div>
-//         </div>
-//     )
-// }

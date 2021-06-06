@@ -1,14 +1,15 @@
 import React from 'react'
 import {Button} from "../components"
+import ApexChart from "../components/Chart"
 
-export const Dashboard = () => {
+export const Dashboard = ({smallNav}) => {
     return (
         <div className="dashboard">
             <nav>
                 <div className="logo-box">
                     <img src="/icons/prospa-logo-grey.svg" alt="logo" id="logo" />
                 </div>
-                <div className="menu-box">
+                <div className="menu-box" onClick={() => smallNav()}>
                     <img src="/icons/hamburger.svg" alt="menu" />
                 </div>
             </nav>
@@ -69,7 +70,9 @@ export const Dashboard = () => {
                             <p id="figure">N47,480.00</p>
                         </div>
                     </div>
-                    <div className="graph-box">Graph here</div>
+                    <div className="graph-box">
+                    <ApexChart />
+                    </div>
                 </div>
                 <div className="right">
                     <p className="main-title" >Cash outflow</p>
@@ -79,7 +82,7 @@ export const Dashboard = () => {
                         </div>
                         <p id="label">Bank Fees</p>
                         <div className="flow-box">
-                            <label for="file">- N250,000</label>
+                            <label htmlFor="file">- N250,000</label>
                             <progress id="file" value="90" max="100"></progress>
                         </div>
                     </div>
@@ -89,7 +92,7 @@ export const Dashboard = () => {
                         </div>
                         <p id="label">Internet</p>
                         <div className="flow-box">
-                            <label for="file">- N250,000</label> 
+                            <label htmlFor="file">- N250,000</label> 
                             <progress id="file" value="70" max="100"></progress>
                         </div>
                     </div>
@@ -99,7 +102,7 @@ export const Dashboard = () => {
                         </div>
                         <p id="label">Bank Fees</p>
                         <div className="flow-box">
-                            <label for="file">- N250,000</label> 
+                            <label htmlFor="file">- N250,000</label> 
                             <progress id="file" value="40" max="100"></progress>
                         </div>
                     </div>
@@ -109,7 +112,7 @@ export const Dashboard = () => {
                         </div>
                         <p id="label">Bank Fees</p>
                         <div className="flow-box">
-                            <label for="file">- N250,000</label> 
+                            <label htmlFor="file">- N250,000</label> 
                             <progress id="file" value="10" max="100"></progress>
                         </div>
                     </div>

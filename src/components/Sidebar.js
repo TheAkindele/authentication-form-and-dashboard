@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 
-export const Sidebar = () => {
+
+export const Sidebar = ({sider}) => {
+
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${sider && "login-sider"}`} >
             <div className="logo-box">
                 <img src="/icons/prospa-logo-white.svg" alt="logo" id="logo" />
             </div>
@@ -29,30 +31,35 @@ export const Sidebar = () => {
     )
 }
 
-export const AuthSider = () => {
-    const [options , setOptions] = useState(true)
+export const AuthSider = ({smallNav}) => {
+    const [options , setOptions] = useState(false)
 
     return (
         <div className="sider">
+            <div id="menu-box"
+                onClick={() => smallNav()}
+            >
+                <img src="icons/cancelss.svg" alt="hamburger" id="hamburger" />
+            </div>
             <div className="step1">
                 <img src="/icons/bn.svg" alt="icon" />
                 <div className="name-box">
-                    <p>Clayvant Inc</p>
-                    <p>Manage account</p>
+                    <p id="main">Clayvant Inc</p>
+                    <p id="sub-main">Manage account</p>
                 </div>
                 <img src="/icons/down-arrow.svg" alt="icon" id="arrow"
                     onClick={() => setOptions(!options)}
                 />
             </div>
-            <div className={`step2 `}>
-                {options && (
-                    <div className="options">
-                        <p id="active">Clayvant Inc</p>
-                        <p id="second">Business Name 2</p>
-                        <p>Business Name 3</p>
-                        <p>Add a business</p>
-                    </div>
-                )}
+            {options && (
+                <div className="options">
+                    <p id="active">Clayvant Inc</p>
+                    <p id="second">Business Name 2</p>
+                    <p>Business Name 3</p>
+                    <p>Add a business</p>
+                </div>
+             )}
+            <div className="step2">
                 <ul className={`menu-list ${options && "down"}`}>
                 <li className="list">
                         <img src="/icons/invoice.svg" alt="icon" id="list" />
@@ -78,5 +85,7 @@ export const AuthSider = () => {
         </div>
     )
 }
+
+
 
 

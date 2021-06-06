@@ -8,8 +8,32 @@
   @include flex(column, nill, nill);
   font-family: "Poppins", sans-serif;
   padding: 2rem 6rem 10rem 2rem;
+  position: relative;
   @include screen("inbetween") {
     padding: 2.5rem 1.5rem;
+    // padding: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .navbar {
+    display: none;
+    @include screen("inbetween") {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #7e51ff;
+      height: 5rem;
+      padding: 0 2rem;
+      @include flex(column, center, nill);
+      box-sizing: border-box;
+    }
+    &.login-nav {
+      @include screen("inbetween") {
+        background: #1c1335;
+      }
+    }
   }
   .top-most {
     width: 100%;
@@ -18,6 +42,10 @@
     margin-bottom: 6.8rem;
     @include screen("inbetween") {
       margin-bottom: 3rem;
+      margin-top: 5rem;
+      width: 100%;
+      // padding: 1.5rem;
+      // box-sizing: border-box;
     }
     #top {
       align-self: flex-end;
@@ -50,6 +78,9 @@
     margin-left: 30%;
     @include screen("inbetween") {
       margin-left: 0;
+      width: 100%;
+      // padding: 1.5rem;
+      // box-sizing: border-box;
     }
   }
   #title-box {
@@ -57,26 +88,47 @@
     #topic {
       font-style: normal;
       font-weight: 600;
-      font-size: 28px;
-      line-height: 42px;
+      font-size: 1.75rem;
+      line-height: 2.625rem;
       color: #1b003b;
       margin: 0;
+      @include screen("inbetween") {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+      }
     }
     #sub-topic {
       font-weight: normal;
-      font-size: 16px;
-      line-height: 24px;
+      font-size: 1rem;
+      line-height: 1.5rem;
       color: #8397ab;
       margin: 0;
+      max-width: 22.5rem;
+      @include screen("inbetween") {
+        font-size: 0.7rem;
+        line-height: 1rem;
+      }
     }
   }
   .form-box {
+    // width: 23rem;
+    width: 55%;
     margin-bottom: 2rem;
+    @include screen("large") {
+      width: 75%;
+    }
+    @include screen("inbetween") {
+      width: 100%;
+    }
+  }
+  .detail-form {
+    width: 100%;
   }
   .radio-box {
     @include flex(row, nill, nill);
-    width: 23.4rem;
-    padding: 1.5rem 3.5rem 1rem 1rem;
+    // width: 23.4rem;
+    width: 100%;
+    padding: 1.5rem 3rem 1rem 1rem;
     margin-bottom: 1rem;
     background: #ffffff;
     // border: 1px solid #fa4a84;
@@ -98,6 +150,10 @@
         line-height: 1.5rem;
         color: #1c1335;
         margin: 0;
+        @include screen("inbetween") {
+          font-size: 0.85rem;
+          line-height: 1rem;
+        }
       }
       .show {
         display: block;
@@ -112,6 +168,10 @@
         line-height: 1.187rem;
         color: #8397ab;
         margin: 0 0 1rem 0;
+        @include screen("inbetween") {
+          font-size: 0.7rem;
+          line-height: 0.9rem;
+        }
       }
       .sub {
         font-style: normal;
@@ -120,6 +180,10 @@
         line-height: 1.187rem;
         color: #8397ab;
         margin: 0;
+        @include screen("inbetween") {
+          font-size: 0.7rem;
+          line-height: 0.9rem;
+        }
       }
 
       .text-box {
@@ -132,20 +196,30 @@
         }
       }
     }
+    &.border-red {
+      border: 1px solid #fa4a84;
+    }
+    input:focus {
+      background-color: #fa4a84;
+    }
+  }
+  .register-btn {
+    max-width: 100%;
+    margin-top: 2rem;
   }
 }
 
 .input-cont {
-  width: 23rem;
+  width: 98%;
   height: auto;
 
   #box {
     @include flex(row, space-between, center);
     #tell {
-      width: 25%;
+      width: 22%;
     }
     #phone {
-      width: 72%;
+      width: 70%;
     }
   }
 }
